@@ -1,6 +1,9 @@
+<div class="leftPan">
 <section id='body_content'>
   <%=raw @page[:body] %>
 </section>
+<%= @page.content_for(:middle_body) %>
 <section id='side_body_content'>
   <%=raw @page[:side_body] %>
 </section>
+</div>

@@ -1,18 +1,28 @@
 @import url('refinery/application.css');
 
+/* Browser Resetter */
+body,div,span,p,a,img,h1,h2,h3,h4,h5,h6,ul,ol,li,blockquote,input{margin:0;padding:0;border:0;outline:0;}
+ul,li,ol{list-style:none;}
+img{float: left;}
+a{outline: none; text-decoration:none;}
+
 body {
-  background: #DDD;
-  font-family: Verdana;
-  font-size: 13px;
-  line-height: 18px;
+  background: #232629;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 12px;
+  font-weight: normal;
 }
 
-#body_content, #side_body_content {
+/*#body_content, #side_body_content {
   float: left;
   width: 45%;
   background: white;
   color: #333;
   padding: 20px;
+}*/
+
+#page {
+  width:100%;
 }
 
 #menu ul {
@@ -33,4 +43,368 @@ body {
 
 #menu ul li.selected a, #menu ul li a:hover {
   background: #CCC;
+}
+
+#footer-wrap {
+  background-color: #232629;
+  width: 100%;
+}
+
+table.footNav {
+  color: #727272;
+  font-size: 11px;
+  padding: 0 4px  ;
+}
+
+#footer {
+  width:970px;
+  height:200px;
+  float:none;
+  margin:0 auto;
+  position:relative;
+}
+
+#footer p.copyright{
+	min-width:120px;
+	float:left;
+	font-size:11px;
+	color:#727272;
+	line-height:21px;
+	margin:55px 0 0 0;
+}
+
+/* stylin footer navigation content */
+ul.footNav{
+	clear:left;
+	min-width:260px;
+	float:left;
+}
+ul.footNav li{
+	float:left;
+	color:#727272;
+	line-height:21px;
+}
+ul.footNav li a{
+	float:left;
+	padding:0px 4px;
+	font-size:11px;
+	color:#727272;
+}
+
+/* stylin footer logo */
+div.footLogo{
+	width:237px;
+	height:200px;
+	float:right;
+	position:absolute;
+	top:0px;
+	right:70px;
+	background:url(/images/gradient_footer.png) no-repeat left center;
+}
+div.footLogo img{
+	margin:68px 0 0 30px;
+}
+
+#top-wrap{
+  width:100%;
+  float:left;  
+}
+
+/* Layout styles */
+#header-wrap{
+  width: 100%;
+  float:left;
+  background-color: #232629;
+}
+
+
+#header{
+  width:970px;
+  height:72px;
+  float: none;
+  margin:0 auto;
+  position: relative;
+}
+
+h1{
+  display: block;
+  float:left;
+  margin:18px 0 0 0;
+}
+
+/* tool tip for logo */
+em.ttip {
+background:url(/images/bubble.png) no-repeat;
+width: 112px;
+height: 56px;
+float:left;
+display: block;
+position:absolute;
+top: 230px;
+left: 15px;
+text-align: center;
+text-indent:0px;
+z-index: 2;
+display: none;
+line-height:70px;
+color:#4e4e4e;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+/* stylin navigation content */
+ul.nav{
+  min-width: 573px;
+  float:right;
+  display:block;
+  margin:22px 0 0 0;
+}
+ul.nav li{
+  float:right;
+  width:auto;
+}
+ul.nav li a{
+  float:left;
+  font-size: 14px;
+  color:#fff;
+  text-align:center;
+  padding:0px 16px;
+  line-height:25px;
+  font-weight:400;
+}
+
+ul.nav li a:hover, ul.nav li a.active{
+  float:left;
+  color:#232629;
+  padding:0 16px 0 0px;
+  background: url(/images/nav-right.png) no-repeat right;
+}
+
+ul.nav li a:hover span, ul.nav li a.active span{
+  display:block;
+  float:left;
+  color:#232629;
+  height:29px;
+  padding:0 0px 0 16px;
+  background: url(/images/nav-left.png) no-repeat left;
+}
+
+#bodywrap {
+	width:100%;
+	float:left;
+	padding:50px 0 0 0;
+	background-color:white;
+}
+
+#bodywrap p {
+  line-height: 1.5em;
+  padding-bottom: 1.5em;
+  font-size: 13px;
+}
+
+#bodywrap a, a:visited { 
+  color: red;
+  font-weight: bold;
+}
+
+#bodywrap a.more, a.more:visited {
+  color: white;
+  background: none;
+  background-color: red;
+}
+
+#body_content_title{
+  display: none;
+}
+
+/* stylin leftPan content */
+.leftPan{
+	width:625px;
+	display:block;
+	float:left;
+	margin-right:60px;
+}
+
+/* universal rules for content inside leftPan */
+.innerLeft h3{
+	width:100%;
+	float:left;
+	font-size:18px;
+	color:#232629;
+	padding-bottom:26px;
+}
+
+
+.leftPan p{
+	width:100%;
+	float:left;
+	font-size:12px;
+	color:#727272;
+	line-height:21px;
+	text-align:justify;
+	padding-bottom:23px;
+}
+.leftPan a.more{
+	width:59px;
+	height:14px;
+	float:left;
+	font-size:11px;
+	color:#fff;
+	font-weight:normal;
+	text-align:center;
+	background: #e26500 url(/images/read-more.jpg) no-repeat;
+}
+
+
+/* stylin innerLeft column inside leftPan */
+.leftPan .innerLeft{
+	width:270px;
+	float:left;
+	margin-right:69px;
+}
+.leftPan .innerLeft p{
+	width:270px;
+	float:left;
+}
+
+/* stylin inner Right content */
+.leftPan .innerRight{
+	width:266px;
+	display:block;
+	float:left;
+}
+
+.rightPan h3{
+	font-size:18px;
+	color:#232629;
+	padding-bottom:28px;
+}
+
+.innerRight h3{
+  font-size:18px;
+	color:#232629;
+	padding-bottom:28px;
+}
+
+#body_content_left {
+  float:left;
+  width:270px;
+  padding: 0px 0px 0px 150px;
+}
+
+#body_content_right {
+  float:left;
+  width:266px;
+  padding: 0px 0px 0px 50px;
+  color: #727272;
+}
+
+#middle_body {
+  float:left;
+  width:277px;
+  padding: 0px 0px 0px 50px;
+}
+
+/* stylin bottom-wrap */
+.botomwrap{
+	width:970px;
+	float:left;
+	margin:40px 0 46px 0;
+	padding: 0px 0px 0px 150px;
+}
+.botomLeft{
+	width:625px;
+	float:left;
+	margin-right:60px;
+}
+.botomLeft h4{
+	width:100%;
+	float:left;
+	font-size:18px;
+	color:#232629;
+	padding-bottom:12px;
+}
+.botomLeft blockquote{
+	width:618px;
+	float:left;
+	font-size:12px;
+	color:#727272;
+	line-height:21px;
+	padding:15px 0 26px 0;
+	background:url(/images/quot-watermark.png) no-repeat top left;
+}
+.botomLeft p.signature{
+	clear:left;
+	float:left;
+	font-size:12px;
+	color:#5d5d5d;
+	font-weight:bold;
+}
+
+/* stylin rightside content */
+.botomRight{
+	width:277px;
+	display:block;
+	float:left;
+}
+.botomRight h4{
+	width:100%;
+	float:left;
+	font-size:18px;
+	color:#232629;
+	padding-bottom:26px;
+}
+.botomRight p.qcontact{
+	width:233px;
+	float:left;
+	font-size:12px;
+	color:#727272;
+	line-height:21px;
+}
+p.qcontact a{
+	font-size:12px;
+	color:#727272;
+	text-decoration:underline;
+}
+p.qcontact a:hover{
+	font-size:12px;
+	color:#727272;
+	text-decoration:none;
+}
+
+
+/* stylin banner content */
+.banner-wrap{
+	width:100%;
+	height:378px;
+	float:left;
+	position:relative;
+	background: url(/images/banner_bg.png) repeat-x;
+}
+.banner-inner{
+	height:378px;
+	background:url(/images/banner-grad.png) no-repeat 50px 0;
+}
+.banner{
+	width:970px;
+	display:block;
+	float:none;
+	margin:0 auto;
+}
+.banner img{
+	float:right;
+	margin:42px 0 0 0;
+}
+.leftContent{
+	width:375px;
+	float:left;
+	margin:65px 0 0 0;
+}
+.leftContent h2{
+	width:100%;
+	float:left;
+	font-size:36px;
+	color:#fff;
+	padding-bottom:25px;
+	text-transform:uppercase;
+	text-shadow: 2px 2px 3px #971410;
 }
