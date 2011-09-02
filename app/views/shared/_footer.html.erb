@@ -1,0 +1,20 @@
+<div id="footer-wrap">
+  <div id="footer">
+  <!-- Original footer code, retain to demonstrate how Refinery did translation
+  <p>
+    <%= t('.copyright', :year => Time.now.year,
+                        :site_name => RefinerySetting.find_or_set(:site_name, "Company Name")) %>
+  </p> -->
+    <p class="copyright"> &copy; 2004-<%= Time.now.year %> All Rights Reserved.</p>
+    <ul class="footNav">
+        <li> <a href="" style="padding-left:0px;"> Home </a> </li>
+        <li> <a href=""> Services </a> </li>
+        <li> <a href=""> Porfolio </a> </li>
+        <li> <a href=""> About Us </a> </li>
+        <li> <a href=""> Contact Us </a> </li>
+    </ul>
+    <div class="footLogo">
+      <img src="/images/el_logo_footer.png"/>
+    </div>
+  </div>
+</div>

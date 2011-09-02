@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+ <%= stylesheet_link_tag 'styles.css', :media => 'screen' %>
+ <%= javascript_include_tag 'slider/jquery-1.4.min.js'%> 
+
+ <%= javascript_include_tag 'slider/loopedslider.min.js' %> 
+ <script type='text/javascript'>
+   //<![CDATA[
+     $(function(){
+       $('#loopedSlider').loopedSlider({
+         autoStart: 20000,
+         fadespeed: 200,
+         slidespeed:800,
+         restart: 5000
+       });
+     });
+   //]]>
+ </script>
+
+  <%= stylesheet_link_tag 'ad.css' %>
+  
+  <style media="all" type="text/css">
+    #fotplug{
+    width:100%;
+    height:40px;
+    float:left;
+  </style>
+  
+  <%= javascript_include_tag 'index.js' %>
+  <%= stylesheet_link_tag 'compiled/enablelabs_home.css', :media => 'screen, projection' %>
+  <%= stylesheet_link_tag 'compiled/application.css', :media => 'screen, projection' %>
+
+<%= render :partial => "/shared/html_tag" %>
+  <% site_bar = render(:partial => "/shared/site_bar", :locals => {:head => true}) -%>
+  <%= render :partial => "/shared/head" %>
+  <body>
+    <%= site_bar -%>
+    <%= render :partial => "/shared/ie6check" if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+    <div id="page_container">
+      <header>
+        <%= render :partial => "/shared/header" -%>
+      </header>
+      <section id='page'>
+        <%= yield %>
+      </section>
+      <footer>
+        <%= render :partial => "/shared/footer" -%>
+      </footer>
+    </div>
+    <%= render :partial => "/shared/javascripts" %>
+  </body>
+</html>
