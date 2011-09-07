@@ -1,0 +1,21 @@
+<%= stylesheet_link_tag 'application.css' %>
+<% content_for :body_content_title do %>
+  <%= @testimonial.title %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  <section>
+    <div id ="bodywrap">
+    <div id="content-wrap">
+    <div class="botomwrap">
+      <div class="botomLeft">      
+        <h4>Client Testimonials</h4>
+        <%=raw @testimonial.blurb %>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>
